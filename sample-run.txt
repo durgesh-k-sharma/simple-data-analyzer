@@ -1,0 +1,112 @@
+No --file given; analyzing the bundled sample (students.csv).
+
+== Dataset overview ==
+Shape: (12, 5)
+Columns: name, grade, study_hours, attendance, score
+
+First five rows:
+     name  grade  study_hours  attendance  score
+0     Ava      9          4.5          95     82
+1    Liam      9          6.0          98     91
+2  Sophia     10          3.5          89     76
+3    Noah     10          7.0          99     94
+4    Emma     11          5.5          93     88
+
+Column types:
+<class 'pandas.DataFrame'>
+RangeIndex: 12 entries, 0 to 11
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   name         12 non-null     str    
+ 1   grade        12 non-null     int64  
+ 2   study_hours  12 non-null     float64
+ 3   attendance   12 non-null     int64  
+ 4   score        12 non-null     int64  
+dtypes: float64(1), int64(3), str(1)
+memory usage: 612.0 bytes
+Numeric summary:
+           grade  study_hours  attendance      score
+count  12.000000    12.000000   12.000000  12.000000
+mean   10.500000     5.500000   93.916667  86.416667
+std     1.167748     1.665151    4.501683   8.826183
+min     9.000000     2.500000   85.000000  68.000000
+25%     9.750000     4.375000   90.750000  81.250000
+50%    10.500000     5.750000   94.500000  89.000000
+75%    11.250000     6.625000   97.250000  92.500000
+max    12.000000     8.000000  100.000000  97.000000
+
+== Missing values (policy: report) ==
+Missing values per column:
+name           0
+grade          0
+study_hours    0
+attendance     0
+score          0
+Data left unchanged; statistics skip missing values.
+
+== Score statistics ==
+Average: 86.42
+Median: 89.00
+Highest: 97
+Lowest: 68
+
+== Students with a score of 90 or higher ==
+    name  grade  score
+    Liam      9     91
+    Noah     10     94
+  Oliver     11     96
+   Ethan     12     90
+Isabella      9     97
+  Amelia     11     92
+
+== Study habits ==
+Studied more than 5 hours:
+    name  study_hours  attendance
+    Liam          6.0          98
+    Noah          7.0          99
+    Emma          5.5          93
+  Oliver          8.0          97
+   Ethan          6.5          96
+Isabella          7.5         100
+  Amelia          6.0          94
+
+Studied more than 5 hours and attendance above 95%:
+    name  study_hours  attendance
+    Liam          6.0          98
+    Noah          7.0          99
+  Oliver          8.0          97
+   Ethan          6.5          96
+Isabella          7.5         100
+
+== Standout students ==
+Top scorer: Isabella (97)
+Most study hours: Oliver (8 h)
+
+== Scores by grade ==
+Average score by grade:
+grade
+9     90.00
+10    79.33
+11    92.00
+12    84.33
+
+Summary by grade:
+            mean  min  max  count
+grade                            
+9      90.000000   82   97      3
+10     79.333333   68   94      3
+11     92.000000   88   96      3
+12     84.333333   79   90      3
+
+== Study hours and scores ==
+Correlation: 0.98
+(Correlation does not show that studying causes higher scores.)
+
+== Plots ==
+Saved plot: output/study_hours_vs_score.png
+Saved plot: output/average_score_by_grade.png
+
+== Export ==
+Saved results: results/high_scoring_students.csv
+Saved results: results/average_scores_by_grade.csv
